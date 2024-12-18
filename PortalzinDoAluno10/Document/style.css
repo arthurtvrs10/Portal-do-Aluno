@@ -1,0 +1,261 @@
+/*ESTILO GERAL*/
+*{ /*para resetar o documento*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* para que todos fiquem dentro da mesma borda da caixa*/
+    font-family: 'Poppins', sans-serif;
+}
+.flex{
+    display: flex;
+}
+/* Estilo básico para a biblioteca */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #201b2c;/* Cor de fundo mais escura */
+    width: 100vw;
+    max-height: 100vh;
+}
+
+.interface {
+    width: 100vw;
+    margin: 0;
+    padding:  15px 30px;
+}
+
+
+/* Cabeçalho */
+header {
+    background-color:  #201b2c; /* Cor de fundo escuro para o cabeçalho */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Garantir que os itens fiquem distribuídos ao longo da linha */
+    align-items: center; /* Alinhar os itens no centro verticalmente */
+    
+}
+.container{
+    width: 100vw;
+}
+
+.logo {
+    flex: 1; /* A logo ocupa 1 fração do espaço disponível */
+   
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+    
+}
+
+.logo span {
+    color: rgb(132, 14, 201); /* Cor roxa para o destaque */
+}
+
+nav.menu-desktop {
+    flex: 2; /* O menu de navegação ocupa 2 frações do espaço */
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Alinhar os itens do menu no centro */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    
+}
+
+nav ul li a:hover {
+    background-color: rgb(132, 14, 201); /* Cor de hover com o roxo */
+    border-radius: 5px;
+}
+
+.tvrs-contato {
+    /* Flex de 1 para ocupar o restante do espaço disponível */
+    flex: 1;
+    text-align: right; /* Alinhar o botão à direita */
+}
+
+.tvrs-contato button {
+    background-color: rgb(132, 14, 201); /* Cor de fundo roxa */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tvrs-contato button:hover {
+    background-color: #e67e22; /* Cor de hover mais clara */
+}
+
+/* Main Content */
+.biblioteca {
+    background-color:  #201b2c;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #fff; /* Cor do texto no título */
+}
+
+.livros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.livro {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #484848; /* Cor de fundo mais escura para os livros */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    opacity: 0.7; /* Opacidade reduzida inicialmente */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease; /* Efeito suave de transição */
+}
+
+.livro:hover {
+    opacity: 1; /* Opacidade total quando passar o mouse */
+    transform: translateY(-10px); /* Movimento no eixo Y */
+}
+
+.livro img {
+    width: 100vw;
+    height: auto;
+    max-width: 200px;
+    transition: transform 0.3s ease-in-out; /* Suaviza o movimento da imagem */
+}
+
+.livro:hover img {
+    transform: translateY(-10px); /* Movimento para cima na imagem */
+}
+
+.livro h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #fff; /* Cor do título do livro */
+}
+
+.livro p {
+    color: #fff; /* Cor do texto do livro */
+    font-size: 1em;
+}
+
+.livro button {
+    background-color: rgb(132, 14, 201); /* Cor de fundo do botão */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease; /* Transição suave para a cor do botão */
+}
+
+.livro button:hover {
+    background-color: #e67e22; /* Cor de hover mais clara para o botão */
+}
+
+/*RODAPE*/
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 16px #ffffff2e;
+}
+footer .flex{
+    justify-content: space-between;/*para jogar os botões pro outro lado*/
+    align-items: center;
+}
+footer .line-footer{
+    padding: 20px 0;
+}
+.borda{
+    border-top: 2px solid rgb(132, 14, 201);
+}
+footer .line-footer p i{
+    color: rgb(132, 14, 201);
+    font-size: 22px;
+}
+.line-footer p a{
+    color: #858585;
+    text-decoration: none;
+    transition: .2s;
+}
+.line-footer p:hover, .line-footer  a:hover{
+    transform: scale(1.05);
+    color: #fff;
+}
+
+footer h1{/*cor texto Portal do Aluno*/
+    color: rgb(255, 255, 255);
+}
+footer span{
+    color: rgb(132, 14, 201);
+}
+.container-down{
+    height: 15px;
+    width: 35%;
+}
+.number-padding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*icons*/
+.social-tavares button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(162, 1, 255);
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .livros {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav.menu-desktop {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .tvrs-contato {
+        text-align: center;
+    }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer .social-links {
+        justify-content: center; /* Alinhar as redes sociais no centro para telas menores */
+    }
+}

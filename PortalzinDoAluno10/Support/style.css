@@ -1,0 +1,198 @@
+/*ESTILO GERAL*/
+*{ /*para resetar o documenot*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* para que todos fiquem dentro da mesma borda da caixa*/
+    font-family: 'Poppins', sans-serif;
+}
+.flex{
+    display: flex;
+}
+body{
+    background-color: #201b2c;
+    height: 100vh; /* para tomar todo o espaço da tela*/
+}
+
+.tvrs-contato button{
+    padding: 10px 40px;/*distacia do nome do botão*/
+    font-size: 20px;
+    font-weight: 600;/*peso da font**/
+    background-color: rgb(132, 14, 201);
+    color: #fff;
+    border: 0; /*tirar a bordinha feia*/
+    border-radius: 90px;
+    cursor: pointer;/*quando o mouse estiver em cima indicar clique*/
+    transition: .2s;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 36px;
+    text-align: center;/*para centralizar*/
+    margin: 65px 0;
+}
+h2.titulo span{
+    color: rgb(132, 14, 201);
+}
+/* ESTILO DO CABEÇALO*/
+header{
+    padding: 20px 4%;
+    box-shadow: 0 0 12px #ffffff2e;
+}
+
+header > .interface{ /*para puxar somente os intens, para não interferir os outros*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+header .logo h1{/*cor texto Portal do Aluno*/
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+header .logo span{
+    color: rgb(132, 14, 201);;
+}
+
+header a{
+    color: #4d4d4d;
+    text-decoration: none;/*para tirar o sublinhado*/
+    display: inline-block;/* vai ter as propriedades do inline e do block, então assim fazendo funcionar a propriedade transform do hover*/
+    transition: .2s;/* transição para realizar esse scale*/
+}
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);/*nao funcionou pq essa propriedade so funciona para block level, serve para aumentar so um pouquinho, o scale é bem ignorante*/
+}
+header nav ul{
+    list-style-type: none; /* para fazer sumir as bolinhas do link*/
+}
+header nav ul li{
+    display: inline-block; /*para ficar uma do lado da outra*/
+    padding: 0 40px;
+}
+
+
+button:hover, section.formulario .enviar input:hover{/*tem que colocar o hover nos dois*/ 
+    color: rgb(132, 14, 201);
+    background-color: #fff;
+    box-shadow: 0px 0px 45px rgb(132, 14, 201, 0.712); /* x, y, espalhamento*/
+    transform: scale(1.05);
+}
+
+
+
+/* ESTILO DO FORMULARIO DE CONTATO*/
+section.formulario{
+    margin-top: 15px;
+    padding: 20px 4%;
+    box-shadow: 0 0 2px #ffffff2e;
+}
+form{
+    max-width: 500px;/* nunca vai passar de 500px de largura*/
+    margin: 0 auto;/*centralizou tudo*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;/*agora não ficarão um do lado do outro*/
+    gap: 10px;
+    margin-top: 30px;
+}
+form input, form textarea{
+    width: 100%;/*tomar todo o espaço*/
+    background-color: #484848;
+    padding: 15px 10px;
+    border-radius: 15px;
+    border: 0;
+    outline: 0;/*tirar o contorno quando clica*/
+    color:#fff;
+    font-size: 15px;
+    transition: .2s;
+}
+form textarea{
+    resize: none;/*para nao conseguir mexer no text aarea e quebrar o site*/
+    max-height: 200px;
+}
+section.formulario .enviar{
+    margin-top: 15px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+}
+section.formulario .enviar input{
+    width: 120px;
+    background-color: rgb(162, 1, 255);
+    cursor: pointer;
+    font-weight: 700;
+    color: #000;
+    transition: .2s;
+}
+/*Suporte*/
+section.formulario input:hover, form textarea:hover{
+    background-color: #fff;
+    transform: scale(1.02);
+    color: #000;
+    font-weight: 700;
+}
+
+/*RODAPE*/
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 16px #ffffff2e;
+}
+footer .flex{
+    justify-content: space-between;/*para jogar os botões pro outro lado*/
+    align-items: center;
+}
+footer .line-footer{
+    padding: 20px 0;
+}
+.borda{
+    border-top: 2px solid rgb(132, 14, 201);
+}
+footer .line-footer p i{
+    color: rgb(132, 14, 201);
+    font-size: 22px;
+}
+.line-footer p a{
+    color: #858585;
+    text-decoration: none;
+    transition: .2s;
+}
+.line-footer p:hover, .line-footer  a:hover{
+    transform: scale(1.05);
+    color: #fff;
+}
+
+footer h1{/*cor texto Portal do Aluno*/
+    color: rgb(255, 255, 255);
+}
+footer span{
+    color: rgb(132, 14, 201);
+}
+.container-down{
+    height: 15px;
+    width: 35%;
+}
+.number-padding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*icons*/
+.social-tavares button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(162, 1, 255);
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+@media screen and (max-width: 1020px){
+    .menu-desktop, .tvrs-contato{
+        display: none;/*esconder quando chegar nesse taamanho*/
+    }
+}

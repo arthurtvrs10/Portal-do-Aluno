@@ -1,0 +1,311 @@
+/* ESTILO GERAL */
+
+*{ /*para resetar o documenot*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* para que todos fiquem dentro da mesma borda da caixa*/
+    font-family: 'Poppins', sans-serif;
+    /*icon*/
+    
+    /*fim icons*/
+}
+
+body{
+    background-color: #201b2c;
+    height: 100vh; /* para tomar todo o espaço da tela*/
+}
+
+.interface{
+    max-width: 1100px; /*Margem para todo o conteuddo*/
+    margin: 0 auto;
+    
+}
+.flex{
+    display: flex;
+}
+
+.tvrs-contato button{
+    padding: 10px 40px;/*distacia do nome do botão*/
+    font-size: 20px;
+    font-weight: 600;/*peso da font**/
+    background-color: rgb(132, 14, 201);
+    color: #fff;
+    border: 0; /*tirar a bordinha feia*/
+    border-radius: 90px;
+    cursor: pointer;/*quando o mouse estiver em cima indicar clique*/
+    transition: .2s;
+}
+h2.titulo{
+    color: #fff;
+    font-size: 36px;
+    text-align: center;/*para centralizar*/
+    margin: 65px 0;
+}
+h2.titulo span{
+    color: rgb(132, 14, 201);
+}
+/* ESTILO DO CABEÇALO*/
+header{
+    padding: 23px 4%;
+    box-shadow: 0 0 16px #ffffff2e;
+}
+
+header > .interface{ /*para puxar somente os intens, para não interferir os outros*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo h1{/*cor texto Portal do Aluno*/
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+header .logo span{
+    color: rgb(132, 14, 201);;
+}
+
+header a{
+    color: #4d4d4d;
+    text-decoration: none;/*para tirar o sublinhado*/
+    display: inline-block;/* vai ter as propriedades do inline e do block, então assim fazendo funcionar a propriedade transform do hover*/
+    transition: .2s;/* transição para realizar esse scale*/
+}
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);/*nao funcionou pq essa propriedade so funciona para block level, serve para aumentar so um pouquinho, o scale é bem ignorante*/
+}
+header nav ul{
+    list-style-type: none; /* para fazer sumir as bolinhas do link*/
+}
+header nav ul li{
+    display: inline-block; /*para ficar uma do lado da outra*/
+    padding: 0 40px;
+}
+
+
+button:hover, section.formulario .enviar input:hover{/*tem que colocar o hover nos dois*/ 
+    color: rgb(132, 14, 201);
+    background-color: #fff;
+    box-shadow: 0px 0px 45px rgb(132, 14, 201, 0.712); /* x, y, espalhamento*/
+    transform: scale(1.05);
+}
+
+/* TOPO-DO-SITE*/
+section .topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;/*era pra centralizar*/
+    justify-content: center;
+    gap: 80px; /* distancia ou respiro entre os elementos*/
+}
+
+.topo-do-site .txt-autobiografia h1{
+    color: #fff;
+    font-size: 34px;
+    line-height: 40px;/*disatancia entre a altura das linhas*/ 
+}
+.topo-do-site .txt-autobiografia h1 span{
+    color: rgb(132, 14, 201);
+}
+
+.topo-do-site .txt-autobiografia p{
+    color: #fff;
+    margin: 40px 0;
+}
+.topo-do-site .txt-autobiografia p span{
+    color: #920d92;
+}
+
+.topo-do-site .img-autobiografia img{
+    position: relative;/* top, lef, etc so funcionam se o position for relative.*/
+    animation: flutuar 2s ease-in-out infinite alternate;/* nome, tmp pra concluir, velocidade fade in or fade out, não pare, e fique alternando*/
+    width: 300px;/* tamanho da imagem*/
+    border-radius: 100%; /* foto circulo*/
+    border: 0; /*para remover o feio da borda*/
+    box-shadow: 0 0 40px rgb(132, 14, 201); /*dar o efeito de sombreamento*/
+    margin-top: 60px;
+}
+
+
+@keyframes flutuar{
+    0%{ /*primeiro dizer como ela vai estar na posição inicial*/
+        top: 0;/*distancia do topo é 0*/
+    }
+    100%{
+        top: 20px;
+    }
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+section.especialidades{
+    padding: 30px ;/*para afastar o conteudo das bordas*/
+    box-shadow: 0 0 16px #ffffff2e;
+    margin-top: 90px;
+}
+section.especialidades .flex{
+    gap: 60px;/*so funciona no display flex*/ 
+}
+section.especialidades .especialidades-box{
+    font-size: 24px;
+    color: #fff;
+    padding: 40px;
+    margin-top: -35px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+section.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px #ffffff83;
+}
+
+section.especialidades .especialidades-box i{
+    color: rgb(162, 1, 255);
+    font-size: 74px;
+}
+.especialidades .especialidades-box h3{
+    font-size: 30px;
+    margin: 15px 0;/*altura, laterais*/
+}
+/*ESTILO SOBRE*/
+section.sobre{
+    padding: 80px 4%;
+    box-shadow: 0 0 16px #ffffff2e;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px; /*respiro*/
+}
+section.sobre .img-sobre img{
+    width: 450px;
+    border-radius: 20px;
+}
+.sobre .txt-sobre{
+    color: #fff;
+}
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height: 28px;/*distancia entre linhas*/
+    margin-bottom: 30px; /*distancia para baixo*/ 
+}
+.sobre .txt-sobre h2 span{
+    color: rgb(162, 1, 255);
+}
+.sobre .txt-sobre p{
+    margin: 30px 0;
+    text-align: justify; /*alinhar o texto*/
+}
+.social-tavares button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(162, 1, 255);
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+/*ESTILO DO PORTIFOLIO*/
+section.portifolio{
+    padding: 60px 4%;
+    box-shadow: 0 0 16px #ffffff2e;
+}
+section.portifolio .flex{
+    justify-content: space-around;
+}
+.img-port{
+    width: 340px;
+    height: 370px;
+    background-color: #920d92;
+    background-size: cover;/*para se adaptar*/
+    background-position: 100% 0%;
+    transition: 5s;
+    border-radius: 22px;
+    cursor: pointer;
+    position: relative;/*se nao tiver isso, o efeito de overlay ñ funciona*/
+}
+.img-port:hover{/*efeito de rolagem*/
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;/*so vai trabalha dentro do img port*/
+    top: 0;
+    left: 0;
+    width: 100%;/*para tomar toda a largura da tela*/
+    height: 100%;
+    background-color: #0000008d;
+    border-radius: 22px;
+    display: flex; /*para colocar o texto no centro*/
+    align-items: center;/*para colocar o texto no centro*/
+    justify-content: center;/*para colocar o texto no centro*/
+    font-size: 24px;
+    font-weight: 600;/*para deixar a fonte mais pesada*/
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 100%;
+}
+
+/*RODAPE*/
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 16px #ffffff2e;
+}
+footer .flex{
+    justify-content: space-between;/*para jogar os botões pro outro lado*/
+    align-items: center;
+}
+footer .line-footer{
+    padding: 20px 0;
+}
+.borda{
+    border-top: 2px solid rgb(132, 14, 201);
+}
+footer .line-footer p i{
+    color: rgb(132, 14, 201);
+    font-size: 22px;
+}
+footer .line-footer p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer h1{/*cor texto Portal do Aluno*/
+    color: rgb(255, 255, 255);
+}
+footer span{
+    color: rgb(132, 14, 201);
+}
+
+.container-down{
+    height: 15px;
+    width: 40%;
+}
+
+.line-footer p:hover, .line-footer  a:hover{
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.line-footer p a{
+    color: #858585;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.number-padding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1020px){
+    .menu-desktop, .tvrs-contato{
+        display: none;/*esconder quando chegar nesse taamanho*/
+    }
+}

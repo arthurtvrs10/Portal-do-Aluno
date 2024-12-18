@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;/*porque por padrão ja vem com 8px de margin, entao com isso tiramos ela*/
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #201b2c;
+}
+body * {
+    box-sizing: border-box;
+}
+
+/**/
+/* ESTILO DO CABEÇALO*/
+header{
+    padding: 5px 4%;
+    box-shadow: 0 0 15px black;
+}
+.menu-desktop{
+    width: 85%;
+}
+header > .interface{ /*para puxar somente os intens, para não interferir os outros*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo h1{/*cor texto Portal do Aluno*/
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    
+}
+header .logo span{
+    color: rgb(132, 14, 201);
+}
+
+header a{
+    color: #4d4d4d;
+    text-decoration: none;/*para tirar o sublinhado*/
+    display: inline-block;/* vai ter as propriedades do inline e do block, então assim fazendo funcionar a propriedade transform do hover*/
+    transition: .2s;/* transição para realizar esse scale*/
+}
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);/*nao funcionou pq essa propriedade so funciona para block level, serve para aumentar so um pouquinho, o scale é bem ignorante*/
+}
+header nav ul{
+    list-style-type: none; /* para fazer sumir as bolinhas do link*/
+}
+
+header nav ul li{
+    display: inline-block; /*para ficar uma do lado da outra*/
+    padding: 0 80px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/**/
+
+.main-login{
+    width: 90%;/*vw= 1% da largura de sua viewport*/
+    height: 90vh;/*viewport height*/
+    background-color: #201b2c;
+    display: flex;/*faz com que fique lado a lado*/
+    justify-content: center;/* pro eixo x*/
+    align-items: center;/*pro eixo y*/
+    margin-top: 15px;
+}
+.left-login{
+    width: 100vh;/*ocupe apenas 50% dda tela*/
+    height: 70vh;/*para que ocupe 100% da tela*/
+    display: flex;/*faz com que fique lado a lado*/
+    flex-direction: column;/*para direcionar em colular*/
+    justify-content: center;/* pro eixo x*/
+    align-items: center;/*pro eixo y*/
+    margin-right: -354px
+}
+
+.left-login > h1{
+    font-size: 30px;
+    color: rgb(132, 14, 201);
+    position: relative;
+    
+}
+.left-login h1 span{
+    color: #fff;
+}
+
+.left-login-img{
+    width: 380px;
+
+}
+
+.right-login{
+    width: 1100px;/*ocupe apenas 50% dda tela*/
+    height: 80vh;/*para que ocupe 100% da tela*/
+    display: flex;/*faz com que fique lado a lado*/
+    justify-content: right;/* pro eixo x*/
+    align-items: center;/*pro eixo y*/
+    margin-top: -40px;
+}
+
+.card-login{
+    width: 60%;/*pega o tamanho da div que esta o card login, e nao da viewport - pegou 50% do 50vh da right-login*/
+    display: flex;/*faz com que fique lado a lado*/
+    justify-content: center;/* pro eixo x*/
+    align-items: center;/*pro eixo y*/
+    flex-direction: column;
+    padding: 30px 35px ;/*margin pra dentro do elemento*/
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000043; /*x, y, blur, color*/
+}
+
+.card-login > h1{
+    color: rgb(132, 14, 201);
+    font-weight: 800;/*Peso da font*/
+    margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;/*quando usamos isso, o align direction= eixo x e o justify-content= exixo y*/
+    align-items: flex-start;/*eixo x, por conta do flex direction*/
+    justify-content: center;/*eixo y, por conta do flex direction*/
+    margin: 10px 0px;
+}
+
+.textfield input{
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 16px;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;/*tirar a borda quando clica*/
+    box-sizing: border-box;/*para nao ultrapassar a div pai*/
+}
+
+.textfield label{
+    color: #f0ffffde;
+    margin-bottom: 10px;/*distancia entre */
+}
+.textfield input::placeholder{
+    color: #f0ffff94;
+}
+
+div.right-login .textfield input:hover{
+    transform: scale(1.05);
+    
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;/*tirar a outline*/
+    text-transform: uppercase;/*deixar maiscula*/
+    font-weight: 800; /*peso da font*/
+    letter-spacing: 3px;/*espçamento entre letras*/
+    color: #2b134b;
+    background-color: rgb(132, 14, 201);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px rgb(132, 14, 201);/* x, y, blur, expreaded, color*/
+    transition: .2s;
+}
+.btn-login:hover{
+    color: rgb#00ff88;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(132, 14, 201); /* x, y, espalhamento*/
+    transform: scale(1.05);
+}

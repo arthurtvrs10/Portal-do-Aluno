@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;/*a medida das bordas e contada*/
+}
+body{
+    font-family: 'Opens Sans', sans-serif;
+}
+/* GErAL */
+.container{
+    width: 100vw;/*quando resetei, colou na borda*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;/*so alinha se tiver altura definida*/
+    background-color: rgb(213, 213, 213);
+}
+.content{
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;/*não queria centralizar*/
+    align-items: center;
+    position: relative;
+}
+.content::before{/*pseudoelemento*/
+    width: 40%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background-color: #58af9b;
+}
+.tittle{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;/*pega as primeiras letras e coloca em caixa alta*/
+}
+.tittle-primary{
+    color: #fff;
+}
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}
+.first-content{
+    display: flex;
+}
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;/*para trazer para frente*/
+}
+.second-column{
+    flex: 2 0 auto;/* */
+}
+.list-social-media{
+    display: flex;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.second-content{
+    position: absolute;/**/
+    display: none;
+}

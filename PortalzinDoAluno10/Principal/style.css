@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px; /*dar zoom na tela sem mexer a tela*/
+}
+.portal-aluno{
+    font-size: 10px; /*tamanho fonte*/
+    line-height: 10px; /*alutra linha*/
+    font-family: poppinsmedium;
+}
+span{
+    color: white;
+}
+h1{
+    font-size: 30px;
+    line-height: 10px;
+    font-family: poppinsmedium;
+    color: rgb(132, 14, 201);
+    gap: 15px;
+    text-align: center;
+}
+a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 30px;
+    font-size: 25px;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(132, 14, 201);
+}
+#borda{
+    border: 2px solid rgb(132, 14, 201);
+    border-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 15px;   
+    font-size: 19px;
+}
+#notas{
+    border: 2px solid rgb(132, 14, 201);
+    border-color: rgb(132, 14, 201);
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 15px;
+    font-size: 15px;  
+}
+#notas:hover{
+    color: rgb(132, 14, 201);
+    transition: 0.2s;
+}
+.distance{
+    margin-top: 70px;
+}
+.b{
+    background-color: black;
+    border-right: 2px solid rgb(132, 14, 201);
+    margin-right:5px;
+    width: 3000px;
+    padding: 20px;
+    
+}
+.para{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: -280px;
+    gap: 1000px;
+}
+p{
+    display: flex;
+    justify-content: right;
+    margin-top: 100px;
+}
